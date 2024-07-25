@@ -424,47 +424,61 @@ const CartItem = () => {
         <Suggestion />
       </div>
       <PlaceOrderModal
-  isOpen={showOrderModal}
-  onClose={() => {
-    setShowOrderModal(false);
-    navigate("/");
-  }}
->
-  <div className="text-center p-6 bg-white rounded-lg shadow-xl">
-    <div className="mb-6">
-      <svg className="mx-auto h-16 w-16 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </div>
-    
-    <h2 className="text-3xl font-extrabold mb-4 text-green-600">
-      Order Placed Successfully!
-    </h2>
-    
-    <div className="bg-gray-100 p-4 rounded-md mb-4">
-      <p className="text-lg mb-2">
-        Estimated delivery: <span className="font-bold text-blue-600">{estimatedDelivery}</span>
-      </p>
-      <p className="text-sm text-gray-600">
-        Expect delivery between 9 AM and 10 PM on the estimated date.
-      </p>
-    </div>
-    
-    <p className="mb-6 text-lg font-medium text-gray-700">
-      Thank you for shopping with us!
-    </p>
-    
-    <button
-      onClick={() => {
-        setShowOrderModal(false);
-        navigate("/orderedProducts");
-      }}
-      className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
-    >
-      View Order Details
-    </button>
-  </div>
-</PlaceOrderModal>
+        isOpen={showOrderModal}
+        onClose={() => {
+          setShowOrderModal(false);
+          navigate("/bag");
+        }}
+      >
+        <div className="text-center ">
+          <div className="mb-6">
+            <svg
+              className="mx-auto h-16 w-16 text-green-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+
+          <h2 className="text-3xl font-extrabold mb-4 text-green-600">
+            Order Placed Successfully!
+          </h2>
+
+          <div className="bg-gray-100 p-4 rounded-md mb-4">
+            <p className="text-lg mb-2">
+              Estimated delivery:{" "}
+              <span className="font-bold text-blue-600">
+                {estimatedDelivery}
+              </span>
+            </p>
+            <p className="text-sm text-gray-600">
+              Expect delivery between 9 AM and 10 PM on the estimated date.
+            </p>
+          </div>
+
+          <p className="mb-6 text-lg font-medium text-gray-700">
+            Thank you for shopping with us!
+          </p>
+
+          <button
+            onClick={() => {
+              setShowOrderModal(false);
+              navigate("/orderedProducts");
+            }}
+            className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            View Order Details
+          </button>
+        </div>
+      </PlaceOrderModal>
     </>
   );
 };

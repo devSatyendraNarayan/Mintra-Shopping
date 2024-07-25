@@ -10,7 +10,7 @@ const PlaceOrderModal = ({ isOpen, onClose, children }) => {
     // Modal background overlay with center alignment and fixed positioning
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       {/* Modal container with a white background, padding, rounded corners, and a max width */}
-      <div className="bg-white p-6 rounded-lg max-w-md w-full">
+      <div className="bg-white p-6 rounded-lg max-w-md w-full mx-5">
         {/* Container for the close button, aligned to the right */}
         <div className="flex justify-end">
           {/* Close button that triggers the onClose function when clicked */}
