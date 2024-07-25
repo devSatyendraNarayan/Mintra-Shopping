@@ -328,31 +328,31 @@ const CartItem = () => {
 
         {cart.length > 0 && (
           <>
-            <div className="w-[80vw] bg-white border border-gray-300 p-6 mx-5 my-5 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">Apply Coupon</h3>
-              <div className="flex items-center space-x-2">
-                <input
-                  type="text"
-                  value={couponCode}
-                  onChange={(e) => setCouponCode(e.target.value)}
-                  placeholder="Enter coupon code"
-                  className="input input-bordered rounded-sm bg-white text-gray-800 flex-grow"
-                />
-                <button
-                  className="btn btn-primary"
-                  onClick={handleApplyCoupon}
-                  disabled={isLoading || !couponCode}
-                >
-                  Apply
-                </button>
-              </div>
-              {appliedCoupon && (
-                <p className="text-green-600 mt-2">
-                  Coupon {appliedCoupon.code} applied: -
-                  {formatPrice(appliedCoupon.discount)}
-                </p>
-              )}
-            </div>
+           <div className="w-full max-w-[80vw] bg-white border border-gray-300 p-6 mx-auto my-5 rounded-lg shadow-md">
+  <h3 className="text-xl font-semibold mb-4">Apply Coupon</h3>
+  <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
+    <input
+      type="text"
+      value={couponCode}
+      onChange={(e) => setCouponCode(e.target.value)}
+      placeholder="Enter coupon code"
+      className="input input-bordered rounded-sm bg-white text-gray-800 w-full sm:flex-grow"
+    />
+    <button
+      className="btn btn-primary w-full sm:w-auto"
+      onClick={handleApplyCoupon}
+      disabled={isLoading || !couponCode}
+    >
+      Apply
+    </button>
+  </div>
+  {appliedCoupon && (
+    <p className="text-green-600 mt-2">
+      Coupon {appliedCoupon.code} applied: -
+      {formatPrice(appliedCoupon.discount)}
+    </p>
+  )}
+</div>
 
             <PriceDetails
               cart={cart}
