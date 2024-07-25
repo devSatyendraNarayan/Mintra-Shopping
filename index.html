@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding for the document -->
+  <meta charset="UTF-8" />
+  
+  <!-- Favicon for the website -->
+  <link rel="icon" type="image/svg+xml" href="https://cdn-icons-png.flaticon.com/128/3670/3670333.png" />
+  
+  <!-- Link to Google Fonts for custom typography -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  
+  <!-- Viewport settings for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Title of the webpage -->
+  <title>Mintra</title>
+  
+  <style>
+    /* Apply styles to all elements to disable text selection and hide scrollbars */
+    * {
+      user-select: none; /* Prevent text selection */
+      scrollbar-width: none; /* Hide scrollbar for modern browsers */
+    }
+
+    /* Hide scrollbars for WebKit browsers (e.g., Chrome, Safari) */
+    *::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide spin buttons for number inputs in WebKit browsers */
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+      -webkit-appearance: none; /* Remove default spin buttons */
+      margin: 0;
+    }
+
+    /* Hide spin buttons for number inputs in Firefox */
+    input[type='number'] {
+      -moz-appearance: textfield; /* Remove default spin buttons */
+    }
+
+    /* Body styling */
+    body {
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      background-color: #fdfdfd; /* Light gray background color */
+      font-family: 'Roboto', sans-serif; /* Set font for the entire document */
+    }
+
+    /* Heading styling to use a different font family */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Arial, Helvetica, sans-serif; /* Set font for headings */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Root element for React application -->
+  <div id="root"></div>
+  
+  <!-- Link to the main JavaScript file (entry point for React application) -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
